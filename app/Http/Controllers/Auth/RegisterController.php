@@ -39,8 +39,10 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+
+        $this->middleware('guest');
         // if(Auth::user() && Auth::admin()=='sim'){
-            $this->middleware('\App\Http\Middleware\isAdmin::class');
+            // $this->middleware('\App\Http\Middleware\isAdmin::class');
         // }else{
         //     return redirect()->route('home');
         // }
