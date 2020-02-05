@@ -166,6 +166,10 @@ class HomeController extends Controller
         return view('trocaSenha');
     }
 
+    public function teste(){
+        return view('auth/login2');
+    }
+
     public function confirmaTrocaSenha(Request $request)
     {
         $usuario = Auth::user();

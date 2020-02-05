@@ -3,6 +3,8 @@
 
 Auth::routes();
 
+Route::get('/teste', ['as'=>'teste', 'uses' => 'HomeController@teste']);
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::post('/cadastrar', ['as' => 'cadastrar', 'uses' => 'PreventivaController@cadastrarPreventiva']);

@@ -69,6 +69,9 @@
                                                 <option value="Indaial">Indaial</option>
                                             @elseif (auth()->user()->cluster == 'JVE')
                                                 <option value="Joinville">Joinville</option>
+                                                <option value="Mafra">Mafra</option>
+                                                <option value="Jaraguá do Sul">Jaraguá do Sul</option>
+                                                <option value="São Bento do Sul">São Bento do Sul</option>
                                             @elseif (auth()->user()->cluster == 'FNS')
                                                 <option value="Florianópolis">Florianópolis</option>
                                                 <option value="São José">São José</option>
@@ -78,10 +81,7 @@
                                                 <option value="Criciúma">Criciúma</option>
                                             @endif
                                         </select><br><br>
-
-
-
-
+                                        
                                     <label><b>Reclamação do cliente</b></label>
                                     <textarea required rows="4" maxlength="220"
                                     name="reclamacao" id="reclamacao" cols="90" placeholder="Reclamação do cliente..."></textarea>

@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
                     <ul class="navbar-nav mr-auto" style="color:#2e3436; font-size: 140%;float: none;">
-                        <b>Sistema Preventivo - SC</b>
+                        <b>Agente Autorizado SC</b>
                     </ul>
                     @guest
                     @else
