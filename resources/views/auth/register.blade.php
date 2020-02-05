@@ -25,9 +25,13 @@
                         <div class="form-group row">
                         <label for="cluster" class="col-md-4 col-form-label text-md-right" style="margin-right:2%">Cluster</label>
                                     <select required name="cluster">
-                                        <option value="BNU">Blumenau</option>
-                                        <option value="JVE">Joinville</option>
-                                        <option value="FNS">Florianópolis</option>
+                                        @if (auth()->user()->cluster == 'BNU')
+                                            <option value="BNU">Blumenau</option>
+                                        @elseif (auth()->user()->cluster == 'JVE')
+                                            <option value="JVE">Joinville</option>
+                                        @elseif (auth()->user()->cluster == 'FNS')
+                                         <option value="FNS">Florianópolis</option>
+                                        @endif
                                     </select>
                         </div>
                         <div class="form-group row">

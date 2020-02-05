@@ -17,7 +17,7 @@
                                 <label style="color:white;margin-left: 60%;" for="filtros">Filtros:</label>
                                 <a class="btn btn-outline-primary btn-sm"  href="{{route('listarAbertos')}}"><b>Abertos</b></a>
                                 <a class="btn btn-outline-warning btn-sm"  href="{{route('listarPendentes')}}"><b>Pendentes</b></a>
-                                <a class="btn btn-outline-danger btn-sm"  href="{{route('listarADM')}}"><b>Todos</b></a>
+                                <a class="btn btn-outline-danger btn-sm"  href="{{route('listar')}}"><b>Todos</b></a>
                             @endif
                     </div>
                     <div class="container-fluid">

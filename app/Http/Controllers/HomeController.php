@@ -30,12 +30,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('TT/home');
     }
     public function fechar($id)
     {
         $registro = Preventiva::find($id);
-        return view('fechar', compact('registro'));
+        return view('TT/fechar', compact('registro'));
     }
     public function realizarFechamento(Request $req, $id)
     {
@@ -51,19 +51,19 @@ class HomeController extends Controller
 
         if($req->trava == 'fechar'){
             Preventiva::find($id)->update($dados);
-            return redirect()->route('listarADM');
+            return redirect()->route('listar');
         }else{
             $preventiva = Preventiva::find($id);
             $preventiva->encerramento = $req->encerramento;
             $preventiva->save();
         }
-        return redirect()->route('listarADM');
+        return redirect()->route('listar');
     }
 
     public function editarInfo($id){
 
         $registro = Preventiva::find($id);
-        return view('editaAA', compact('registro'));
+        return view('TT/editaAA', compact('registro'));
 
     }
 
@@ -87,17 +87,7 @@ class HomeController extends Controller
         $preventiva->save();
 
         return redirect()
-            ->route('listarADM');
-    }
-    public function listar()
-    {
-        $user_id = Auth::id();
-        $preventivas = DB::table('preventivas')
-            ->where('user_id', '=', $user_id)
-            ->orderBy('created_at', 'DESC')
-            ->orderBy('status')
-            ->simplePaginate(30);
-        return view('listar', ['preventivas'=>$preventivas]);
+            ->route('listar');
     }
 
     public function pesquisaPreventiva(Request $req)
@@ -105,25 +95,44 @@ class HomeController extends Controller
         $user_id = Auth::id();
         $search = $req->get('valorPesquisado');
 
-        $preventivas = DB::table('preventivas')
-            ->where('instancia', 'like', '%' . $search . '%')
-            ->where('user_id', '=', $user_id)
-            ->orderBy('created_at')
-            ->simplePaginate(30);
-        return view('listar', ['preventivas' => $preventivas]);
-    }
 
-    public function listarADM()
-    {
         $user = User::find(Auth::id());
         $cluster = $user->cluster;
 
         $preventivas = DB::table('preventivas')
+            ->where('instancia', 'like', '%' . $search . '%')
+            ->where('user_id', '=', $user_id)
             ->where('cluster', 'like', $cluster)
+            ->orderBy('created_at')
+            ->simplePaginate(30);
+        return view('TT/listar', ['preventivas' => $preventivas]);
+    }
+
+    public function listar()
+    {
+        $user_id = Auth::id();
+        $admin = Auth::user()->admin;
+
+        if($admin == 'nao'){
+            $preventivas = DB::table('preventivas')
+            ->where('user_id', '=', $user_id)
             ->orderBy('created_at', 'DESC')
-            ->orderBy('status', 'DESC')
+            ->orderBy('status')
             ->simplePaginate(35);
-        return view('listar', ['preventivas'=>$preventivas]);
+        return view('TT/listar', ['preventivas'=>$preventivas]);
+        }else{
+
+            $user = User::find(Auth::id());
+            $cluster = $user->cluster;
+            
+            $preventivas = DB::table('preventivas')
+                ->where('cluster', 'like', $cluster)
+                ->orderBy('created_at', 'DESC')
+                ->orderBy('status', 'DESC')
+                ->simplePaginate(35);
+            return view('TT/listar', ['preventivas'=>$preventivas]);
+
+        }
     }
 
     public function listarAbertos()
@@ -136,38 +145,42 @@ class HomeController extends Controller
             ->where('cluster', 'like', $cluster)
             ->orderBy('created_at', 'DESC')
             ->simplePaginate(35);
-        return view('listar', ['preventivas'=>$preventivas]);
+        return view('TT/listar', ['preventivas'=>$preventivas]);
     }
 
     public function listarPendentes()
     {
         $user = User::find(Auth::id());
         $cluster = $user->cluster;
+
         $preventivas = DB::table('preventivas')
             ->where('status', '=', 'Pendente')
             ->where('cluster', 'like', $cluster)
             ->orderBy('created_at', 'DESC')
             ->simplePaginate(35);
-        return view('listar', ['preventivas'=>$preventivas]);
+        return view('TT/listar', ['preventivas'=>$preventivas]);
     }
 
     public function pesquisaPreventivaADM(Request $req)
     {
         $search = $req->get('valorPesquisado');
+        $user = User::find(Auth::id());
+        $cluster = $user->cluster;
 
         $preventivas = DB::table('preventivas')
             ->where('instancia', 'like', '%' . $search . '%')
+            ->where('cluster', 'like', $cluster)
             ->orderBy('created_at')
             ->simplePaginate(30);
-        return view('listar', ['preventivas' => $preventivas]);
+        return view('TT/listar', ['preventivas' => $preventivas]);
     }
 
     public function trocaSenha(){
         return view('trocaSenha');
     }
 
-    public function teste(){
-        return view('auth/login2');
+    public function escolha(){
+        return view('escolha');
     }
 
     public function confirmaTrocaSenha(Request $request)
@@ -177,7 +190,7 @@ class HomeController extends Controller
         $usuario->password = bcrypt(Request('password'));
         $usuario->save();   
 
-        return view('home');
+        return view('TT/home');
     }
 
 

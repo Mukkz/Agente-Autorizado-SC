@@ -82,7 +82,7 @@
                                 <button type="submit" class="btn btn-primary" formaction="{{route('realizarFechamento', $registro->id)}}">
                                 <b>Enviar</b>
                                 </button>
-                                <a class="btn btn-dark" href="{{route('listarADM')}}">
+                                <a class="btn btn-dark" href="{{route('listar')}}">
                                 <b>Voltar</b>
                                 </a>
                             </form>

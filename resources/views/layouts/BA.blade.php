@@ -22,25 +22,24 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
-                    <ul class="navbar-nav mr-auto" style="color:#2e3436; font-size: 140%;float: none;">
-                        <b style="color:white;background:navy">Sistema de TT</b>
+                    <ul class="navbar-nav mr-auto" style="color:navy; font-size: 140%;float: none;">
+                        <b>Sistema de BA</b>
                     </ul>
                     @guest
                     @else
                         <ul class="navbar-nav" style="float: none;">
                             <li class="nav-item">
-                                <a class="btn btn-app btn-success " style="margin-right:5px" href="{{route('home')}}"><i class="fa fa-edit" style="padding-right:5px"></i><b>Solicitar TT</b><span class="sr-only"></span></a>
+                                <a class="btn btn-app btn-success " style="margin-right:5px" href="{{route('homeBA')}}"><i class="fa fa-edit" style="padding-right:5px"></i><b>Solicitar BA</b><span class="sr-only"></span></a>
                             </li>
                             <li class="nav-item mr-auto">
-                                <a class="btn btn-app btn-info" style="margin-right:5px" href="{{route('listar')}}"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar</b><span class="sr-only"></span></a>
+                                <a class="btn btn-app btn-info" style="margin-right:5px" href="#"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar</b><span class="sr-only"></span></a>
                             </li>
                             <!-- <li class="nav-item mr-auto">
                                 <a class="btn btn-app btn-danger"  href="http://bit.ly/VIVO-WIFI" target="_blank"><i class="fa fa-gift" style="padding-right:5px"></i><b>Material WIFI</b><span class="sr-only"></span></a>
                             </li> -->
                             <li class="nav-item mr-auto">
-                                <a class="btn btn-app btn-link"  href="{{route('homeBA')}}"><i class="fa fa-crosshairs" style="padding-right:5px"></i><b>IR para sistema de BA</b><span class="sr-only"></span></a>
+                                <a class="btn btn-app btn-link"  href="{{ route('home') }}"><i class="fa fa-wrench" style="padding-right:5px"></i><b>IR para sistema de TT</b><span class="sr-only"></span></a>
                             </li>
-                            
                         </ul>
                     @endguest
                     <ul class="navbar-nav ml-auto" style="float: none;">
