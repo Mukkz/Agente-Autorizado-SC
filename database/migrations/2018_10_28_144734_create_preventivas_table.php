@@ -32,6 +32,7 @@ class CreatePreventivasTable extends Migration
 
             $table->timestamps();
         });
+
     }
 
     /**

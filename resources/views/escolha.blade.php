@@ -26,8 +26,8 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <div class="text-center">
-                                    <a class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" href="{{route('home')}}">Sistema de TT</a>
-                                    <a class="btn btn-lg btn-secondary btn-block btn-login text-uppercase font-weight-bold mb-2" href="{{route('homeBA')}}#">Sistema de BA</a>
+                                    <a class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" style="background:black;" href="{{route('home')}}">Sistema de TT</a>
+                                    <a class="btn btn-lg btn-light btn-block btn-login text-uppercase font-weight-bold mb-2" style="color:black;" href="{{route('homeBA')}}#">Sistema de BA</a>
                                 </div>
                             </div>                            
                         </div>
@@ -37,4 +37,13 @@
         </div>
     </div>
 </body>
+<footer class="footer text-center">
+    <div class="container">
+        Copyright ©2019
+    </div>
+    <div class="container">
+        Elaborado por: Samuel Taira da Costa - Dúvidas ou sugestões? 
+        <a href="mailto: samuel.tcosta@telefonica.com" target="_top">samuel.tcosta@telefonica.com</a>
+        </div>
+</footer>
 </html>

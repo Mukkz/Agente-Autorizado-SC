@@ -14,7 +14,7 @@
 
     </script>
 
-    <div class="container" >
+    <div class="container" style="font-size:14px">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -51,8 +51,8 @@
 
                                     <label><b>Informação adicional</b></label>
 
-                                    <textarea required rows="4" maxlength="190"
-                                    name="informacao" id="reclamacao" cols="90" placeholder="Data e período agendado, contato alternativo ... Informações adicionais."></textarea>
+                                    <textarea required rows="3" maxlength="190"
+                                    name="informacao" id="reclamacao" cols="105" placeholder="Data e período agendado, contato alternativo ... Informações adicionais."></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">190</span> Restantes)</p>
 
                                     <input type="hidden" name="feedback" value="">

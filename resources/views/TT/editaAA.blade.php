@@ -15,11 +15,11 @@
 
     </script>
 
-    <div class="container">
+    <div class="container" style="font-size:14px">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><b>Editar INFO</b></div>
+                    <div class="card-header bg-dark"><b style="color:white">Editar INFO</b></div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -43,7 +43,7 @@
                                            value="{{isset($registro->reclamacao) ? $registro->reclamacao : ''}}">
                                     <br>
                                     <label><b>Editar informação</b></label><br>
-                                    <textarea rows="4" maxlength="220" name="reclamacao" id="encerramento" cols="90"></textarea>
+                                    <textarea rows="3" maxlength="220" name="reclamacao" id="encerramento" cols="105"></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">220</span> Restantes)</p>
                                 </div>
 

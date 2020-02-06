@@ -15,11 +15,11 @@
 
     </script>
 
-    <div class="container">
+    <div class="container" style="font-size:14px">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><b>Fechar preventiva</b></div>
+                    <div class="card-header bg-dark"><b style="color:white">Fechar preventiva</b></div>
                     @if(count($errors) != 0)
                         @foreach($errors->all() as $erro)
                             <div class="teste alert alert-danger alert-dismissible" role="alert"
@@ -56,24 +56,20 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="trava"value="atualizar" checked>
                                         <label class="form-check-label" for="trava">
-                                            Atualizar
+                                            <b style="color:green">Atualizar</b>
                                         </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="trava" value="fechar">
                                         <label class="form-check-label" for="trava">
-                                            Fechar
+                                        <b style="color:red">Fechar</b>
                                         </label>
-                                    </div>
+                                    </div><br>
                                     <br><label><b>Informação</b></label><br>
                                     <!-- <input required type="text" name="encerramento"> -->
-                                    <textarea rows="4" maxlength="220" name="encerramento" id="encerramento" cols="90"></textarea>
+                                    <textarea rows="3" maxlength="220" name="encerramento" id="encerramento" cols="105"></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">220</span> Restantes)</p>
                                     <div class="container">
-                                        <input required type="radio" name="tecnologia" value="Metálico">
-                                        <label>Metálico</label>
-                                        <input required type="radio" name="tecnologia" value="GPON">
-                                        <label>Gpon</label>
                                         <input type="hidden" name="resolucao" value="Fechado">
                                         <input type="hidden" name="status" value="Fechado">
                                     </div>

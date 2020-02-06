@@ -55,7 +55,6 @@
                                 <th scope="col">Data abertura</th>
                                 @if(auth()->user()->admin == 'sim')
                                     <th scope="col">Solicitante</th>
-                                    <th scope="col">Tecnologia</th>
                                 @endif
                                     <th scope="col">Ação</th>
 
@@ -77,7 +76,6 @@
                                     <td>{{$preventiva->created_at}}</td>
                                     @if(auth()->user()->admin == 'sim')
                                         <td>{{$preventiva->criado_por}}</td>
-                                        <td>{{$preventiva->tecnologia}}</td>
                                         <td>
                                             @if($preventiva->status == 'Aberto')
                                                 <div class="box-body">
@@ -91,7 +89,7 @@
                                                 <div class="box-body">
                                                     <a onclick="return confirm('Confirmar abertura da preventiva?')" href="{{route('realizarAbertura', $preventiva->id)}}">
                                                         <button class="btn btn-sm btn-primary btn-group-sm" >
-                                                            Abrir
+                                                            Tratar
                                                         </button>
                                                     </a>
                                                 </div>

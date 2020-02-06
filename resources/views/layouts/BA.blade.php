@@ -22,8 +22,8 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
-                    <ul class="navbar-nav mr-auto" style="color:navy; font-size: 140%;float: none;">
-                        <b>Sistema de BA</b>
+                    <ul class="navbar-nav mr-auto" style="font-size: 140%;float: none;">
+                        <b>Solicitação de Instalação</b>
                     </ul>
                     @guest
                     @else
@@ -32,7 +32,7 @@
                                 <a class="btn btn-app btn-success " style="margin-right:5px" href="{{route('homeBA')}}"><i class="fa fa-edit" style="padding-right:5px"></i><b>Solicitar BA</b><span class="sr-only"></span></a>
                             </li>
                             <li class="nav-item mr-auto">
-                                <a class="btn btn-app btn-info" style="margin-right:5px" href="#"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar</b><span class="sr-only"></span></a>
+                                <a class="btn btn-app btn-info" style="margin-right:5px" href="#"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar BA</b><span class="sr-only"></span></a>
                             </li>
                             <!-- <li class="nav-item mr-auto">
                                 <a class="btn btn-app btn-danger"  href="http://bit.ly/VIVO-WIFI" target="_blank"><i class="fa fa-gift" style="padding-right:5px"></i><b>Material WIFI</b><span class="sr-only"></span></a>
@@ -46,7 +46,7 @@
                         @guest
                         @else
                             <li class="nav-item dropdown" >
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color:black" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

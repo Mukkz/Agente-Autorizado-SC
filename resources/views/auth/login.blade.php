@@ -60,4 +60,13 @@
     </div>
     </div>
 </body>
+<footer class="footer text-center">
+    <div class="container">
+        Copyright ©2019
+    </div>
+    <div class="container">
+        Elaborado por: Samuel Taira da Costa - Dúvidas ou sugestões? 
+        <a href="mailto: samuel.tcosta@telefonica.com" target="_top">samuel.tcosta@telefonica.com</a>
+        </div>
+</footer>
 </html>

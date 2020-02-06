@@ -14,7 +14,7 @@
 
     </script>
 
-    <div class="container" >
+    <div class="container" style="font-size:14px">
     
         @if(Session::has('message'))
             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">
@@ -83,15 +83,10 @@
                                         </select><br><br>
                                         
                                     <label><b>Reclamação do cliente</b></label>
-                                    <textarea required rows="4" maxlength="220"
-                                    name="reclamacao" id="reclamacao" cols="90" placeholder="Reclamação do cliente..."></textarea>
+                                    <textarea required rows="3" maxlength="220"
+                                    name="reclamacao" id="reclamacao" cols="105" placeholder="Reclamação do cliente..."></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">220</span> Restantes)</p>
-                                    <br><label><b>Tipificação:</b></label>
-                                    <select required name="tipificacao">
-                                        <option value="banda">Banda</option>
-                                        <option value="tv">Linha</option>
-                                        <option value="linha">TV</option>
-                                    </select>
+
                                     <input type="hidden" name="cluster" value="{{auth()->user()->cluster}}">
                                     <input type="hidden" name="encerramento" value="">
                                     <input type="hidden" name="resolucao" value="x">
