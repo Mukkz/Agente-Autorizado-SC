@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header bg-dark"><b style="color:white">Editar INFO</b></div>
+                    <div class="card-header bg-dark"><b style="color:white">Editar Informação</b></div>
 
                     <div class="card-body">
                         @if (session('status'))

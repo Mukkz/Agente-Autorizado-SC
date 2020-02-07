@@ -32,7 +32,7 @@
                                 <a class="btn btn-app btn-success " style="margin-right:5px" href="{{route('homeBA')}}"><i class="fa fa-edit" style="padding-right:5px"></i><b>Solicitar BA</b><span class="sr-only"></span></a>
                             </li>
                             <li class="nav-item mr-auto">
-                                <a class="btn btn-app btn-info" style="margin-right:5px" href="#"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar BA</b><span class="sr-only"></span></a>
+                                <a class="btn btn-app btn-info" style="margin-right:5px" href="{{route('listaBA')}}"><i class="fa fa-list" style="padding-right:5px"></i><b>Listar BA</b><span class="sr-only"></span></a>
                             </li>
                             <!-- <li class="nav-item mr-auto">
                                 <a class="btn btn-app btn-danger"  href="http://bit.ly/VIVO-WIFI" target="_blank"><i class="fa fa-gift" style="padding-right:5px"></i><b>Material WIFI</b><span class="sr-only"></span></a>

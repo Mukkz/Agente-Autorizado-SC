@@ -29,6 +29,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'BA'], function () {
         Route::get('/solicitacao', ['as' => 'homeBA', 'uses' => 'BaController@solicitacao']);
+        Route::get('/lista', 'BaController@listaPriori')->name('listaBA');
+        Route::post('/registra', 'BaController@cadastrarBa')->name('registrar');
+        Route::get('/abrir/{id}', 'BaController@alteraStatus')->name('alteraStatus');
+        Route::get('/fechar/{id}', 'BaController@fecharStatus')->name('fechar');
+        Route::post('/fechar/{id}', 'BaController@realizarFechamento')->name('realizarFechamento');
+        Route::get('/exportba', ['as'=>'exportBA', 'uses'=> 'BaController@export']);
     });
 
     Route::get('/logout', ['as' => 'logout', 'uses' => 'LoginController@logout']);

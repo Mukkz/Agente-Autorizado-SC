@@ -55,13 +55,14 @@
                                     name="informacao" id="reclamacao" cols="105" placeholder="Data e período agendado, contato alternativo ... Informações adicionais."></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">190</span> Restantes)</p>
 
+                                    <input type="hidden" name="cluster" value="{{auth()->user()->cluster}}">
                                     <input type="hidden" name="feedback" value="">
                                     <input type="hidden" name="status" value="Pendente">
-                                    <input type="hidden" name="user_id" value="#">
-                                    <input type="hidden" name="criado_por" value="#">
+                                    <input type="hidden" name="user_id" value="{{Auth::id()}}">
+                                    <input type="hidden" name="criado_por" value="{{auth()->user()->name}}">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary" formaction="#">
+                                <button type="submit" class="btn btn-primary" formaction="{{route('registrar')}}">
                                 <b>Enviar</b>
                                 </button>
                             </form>

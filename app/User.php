@@ -28,6 +28,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Preventiva::class);
     }
+
+    public function bas()
+    {
+        return $this->hasMany(Ba::class);
+    }
+
+    
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPassword($token));
