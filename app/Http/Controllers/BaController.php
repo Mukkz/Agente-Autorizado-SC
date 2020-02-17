@@ -106,4 +106,23 @@ class BaController extends Controller
         return redirect()->route('listaBA');
     }
 
+    public function editarInfoBA($id){
+
+        $registro = Ba::find($id);
+        return view('BA/editaBA', compact('registro'));
+
+    }
+
+    public function editarBA(Request $req, $id){
+
+        $dados = $req->all();
+
+            $preventiva = Ba::find($id);
+            $preventiva->informacao = $req->informacao;
+            $preventiva->save();
+
+        return redirect()->route('listaBA');
+
+    }
+
 }

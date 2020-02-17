@@ -35,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/fechar/{id}', 'BaController@fecharStatus')->name('fechar');
         Route::post('/fechar/{id}', 'BaController@realizarFechamento')->name('realizarFechamento');
         Route::get('/exportba', ['as'=>'exportBA', 'uses'=> 'BaController@export']);
+        Route::get('/editarBA/aa/{id}', ['as' => 'editarInfoBA', 'uses' => 'BaController@editarInfoBA']);
+        Route::post('/editarBA/aaa/{id}', ['as' => 'editarBA', 'uses' => 'BaController@editarBA']);
     });
 
     Route::get('/logout', ['as' => 'logout', 'uses' => 'LoginController@logout']);

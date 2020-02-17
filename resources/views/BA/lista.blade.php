@@ -74,7 +74,7 @@
                                         @if($ba->status == 'Em Tratamento')
                                             <th>        
                                                 <div class="box-body">
-                                                    <a href="#">
+                                                    <a href="{{route('editarInfoBA', $ba->id)}}">
                                                         <button type="button" class="btn-group-sm btn btn-sm btn-dark">
                                                             Editar Info
                                                         </button>
