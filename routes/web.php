@@ -16,9 +16,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/listar', ['as' => 'listar', 'uses' => 'HomeController@listar']);
         Route::get('/listar/search', ['as' => 'search', 'uses' => 'HomeController@pesquisaPreventiva']);
         Route::get('/listar/searchADM', ['as' => 'searchADM', 'uses' => 'HomeController@pesquisaPreventivaADM'])->middleware(\App\Http\Middleware\isAdmin::class);
-        Route::get('/fechar/{id}', ['as' => 'fechar', 'uses' => 'HomeController@fechar']);
-        Route::post('/fechar/{id}', ['as' => 'realizarFechamento', 'uses' => 'HomeController@realizarFechamento']);
-        Route::get('/abrir/{id}', ['as' => 'realizarAbertura', 'uses' => 'HomeController@realizarAbertura']);
+        Route::get('/fechar/{id}', ['as' => 'fecharTT', 'uses' => 'HomeController@fechar']);
+        Route::post('/fechar/{id}', ['as' => 'realizarFechamentoTT', 'uses' => 'HomeController@realizarFechamento']);
+        Route::get('/abrir/{id}', ['as' => 'realizarAberturaTT', 'uses' => 'HomeController@realizarAbertura']);
         Route::get('/export', ['as'=>'export', 'uses'=> 'PreventivaController@export'])->middleware(\App\Http\Middleware\isAdmin::class);
         Route::get('/listarAbertos', ['as' => 'listarAbertos', 'uses' => 'HomeController@listarAbertos'])->middleware(\App\Http\Middleware\isAdmin::class);
         Route::get('/listarPendentes', ['as' => 'listarPendentes', 'uses' => 'HomeController@listarPendentes'])->middleware(\App\Http\Middleware\isAdmin::class);

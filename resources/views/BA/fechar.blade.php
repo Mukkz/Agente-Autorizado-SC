@@ -56,16 +56,15 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="trava"value="atualizar" checked>
                                         <label class="form-check-label" for="trava">
-                                            Atualizar
+                                            <b style="color:green">Atualizar</b>
                                         </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="trava" value="fechar">
                                         <label class="form-check-label" for="trava">
-                                            Fechar
+                                        <b style="color:red">Fechar</b>
                                         </label>
-                                    </div>
-                                    <br><br>
+                                    </div><br><br>
                                     <label><b>Feedback</b></label><br>
                                     <textarea rows="4" maxlength="190" name="feedback" id="feedback" cols="90"></textarea>
                                     <p style="color:#ff0000;">(<span class="caracteres">190</span> Restantes)</p>

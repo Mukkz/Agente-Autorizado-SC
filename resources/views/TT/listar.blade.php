@@ -79,7 +79,7 @@
                                         <td>
                                             @if($preventiva->status == 'Aberto')
                                                 <div class="box-body">
-                                                    <a href="{{route('fechar', $preventiva->id)}}">
+                                                    <a href="{{route('fecharTT', $preventiva->id)}}">
                                                             <button type="button" class="btn-group-sm btn btn-sm btn-danger">
                                                                 Fechar
                                                             </button>
@@ -87,7 +87,7 @@
                                                 </div>
                                             @elseif($preventiva->status == 'Pendente')
                                                 <div class="box-body">
-                                                    <a onclick="return confirm('Confirmar abertura da preventiva?')" href="{{route('realizarAbertura', $preventiva->id)}}">
+                                                    <a onclick="return confirm('Confirmar abertura da preventiva?')" href="{{route('realizarAberturaTT', $preventiva->id)}}">
                                                         <button class="btn btn-sm btn-primary btn-group-sm" >
                                                             Tratar
                                                         </button>

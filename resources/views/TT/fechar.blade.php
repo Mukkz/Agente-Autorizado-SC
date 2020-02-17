@@ -75,7 +75,7 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary" formaction="{{route('realizarFechamento', $registro->id)}}">
+                                <button type="submit" class="btn btn-primary" formaction="{{route('realizarFechamentoTT', $registro->id)}}">
                                 <b>Enviar</b>
                                 </button>
                                 <a class="btn btn-dark" href="{{route('listar')}}">
