@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": "=7.2.27"
             },
             "require-dev": {
                 "phpunit/phpunit": "@stable"
