@@ -47,7 +47,11 @@
                         @endif
                     <label for="inputPassword">Senha</label>
                     </div>
-
+                    <p style="color:red">
+                        Obs¹: Caso esteja com problema na senha, tente entrar com a padrão: Vivo123!
+                    </p>
+                    <!-- <p style="color:red">
+                        Obs²:Quando estiver logado, agora é possível a alteração de senha.</p> -->
                     <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Entrar</button>
                     <div class="text-center">
                     <!-- <a disabled class="small" href="{{ route('password.request') }}">Recuperar senha?</a></div> -->
