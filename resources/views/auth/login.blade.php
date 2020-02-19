@@ -54,7 +54,7 @@
                         Obs²:Quando estiver logado, agora é possível a alteração de senha.</p> -->
                     <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Entrar</button>
                     <div class="text-center">
-                    <!-- <a disabled class="small" href="{{ route('password.request') }}">Recuperar senha?</a></div> -->
+                    <a disabled class="small" href="{{ route('password.request') }}">Recuperar senha?</a></div>
                 </form>
                 </div>
             </div>
