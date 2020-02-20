@@ -4,10 +4,11 @@
 Auth::routes();
 Route::get('/teste', ['as'=>'teste', 'uses' => 'HomeController@teste']);
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@escolha']);
+Route::get('/escolha', ['as'=>'escolha', 'uses' => 'HomeController@escolha']);
 
 Route::group(['middleware' => 'auth'], function () {
 
-    // Route::get('/escolha', ['as'=>'escolha', 'uses' => 'HomeController@escolha']);
+    
 
     Route::group(['prefix' => 'TT'], function () {
 
