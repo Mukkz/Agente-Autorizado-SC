@@ -11,15 +11,17 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header" style="padding:0; padding-left:20px">
+                    <div class="card-header" style="padding:8px; padding-left:20px">
                         <label for="Lista"><b>Listagem de Solicitações</b></label>
                         @if(auth()->user()->admin == 'sim')
-                            <a class="btn btn-success" style="margin:10px;margin-left:20px;" href="{{route('exportBA')}}">Exportar Excel</a>
-                        @endif
-                    </div>
-                    <br>
+                        <a class="btn btn-success btn-sm" style="margin:5px;" href="{{route('exportBA')}}">Exportar Excel</a>
+                                <label style="margin-left: 50%;" for="filtros">Filtros:</label>
+                                <a class="btn btn-outline-primary btn-sm"  href="{{route('listarAbertosBA')}}"><b>Abertos</b></a>
+                                <a class="btn btn-outline-warning btn-sm"  href="{{route('listarPendentesBA')}}"><b>Pendentes</b></a>
+                                <a class="btn btn-outline-danger btn-sm"  href="{{route('listaBA')}}"><b>Todos</b></a>
+                            @endif
+                    </div><br>
                     <main role="main" class="container-fluid">
-
 
                         <table class="table table-sm table-hover">
                             <thead class="thead-light">

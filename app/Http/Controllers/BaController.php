@@ -24,7 +24,6 @@ class BaController extends Controller
 
     public function listaPriori()
     {
-
         $user_id = Auth::id();
         $user = User::find(Auth::id());
         $admin = Auth::user()->admin;
@@ -48,6 +47,31 @@ class BaController extends Controller
             }
     }
 
+    public function listarAbertosBA()
+    {
+        $user = User::find(Auth::id());
+        $cluster = $user->cluster;
+
+        $bas = DB::table('bas')
+            ->where('status', '=', 'Em Tratamento')
+            ->where('cluster', 'like', $cluster)
+            ->orderBy('created_at', 'DESC')
+            ->simplePaginate(35);
+        return view('BA/lista', ['bas'=>$bas]);
+    }
+
+    public function listarPendentesBA()
+    {
+        $user = User::find(Auth::id());
+        $cluster = $user->cluster;
+
+        $bas = DB::table('bas')
+            ->where('status', '=', 'Pendente')
+            ->where('cluster', 'like', $cluster)
+            ->orderBy('created_at', 'DESC')
+            ->simplePaginate(35);
+        return view('BA/lista', ['bas'=>$bas]);
+    }
     
     public function cadastrarBa(Request $req)
     {
