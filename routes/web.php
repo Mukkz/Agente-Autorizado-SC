@@ -31,8 +31,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'BA'], function () {
         Route::get('/solicitacao', ['as' => 'homeBA', 'uses' => 'BaController@solicitacao']);
         Route::get('/lista', 'BaController@listaPriori')->name('listaBA');
-        Route::get('/listarAbertosBA', ['as' => 'listarAbertosBA', 'uses' => 'BAController@listarAbertosBA'])->middleware(\App\Http\Middleware\isAdmin::class);
-        Route::get('/listarPendentesBA', ['as' => 'listarPendentesBA', 'uses' => 'BAController@listarPendentesBA'])->middleware(\App\Http\Middleware\isAdmin::class);
+        Route::get('/listarAbertosBA', ['as' => 'listarAbertosBA', 'uses' => 'BaController@listarAbertosBA'])->middleware(\App\Http\Middleware\isAdmin::class);
+        Route::get('/listarPendentesBA', ['as' => 'listarPendentesBA', 'uses' => 'BaController@listarPendentesBA'])->middleware(\App\Http\Middleware\isAdmin::class);
+        
         Route::post('/registra', 'BaController@cadastrarBa')->name('registrar');
         Route::get('/abrir/{id}', 'BaController@alteraStatus')->name('alteraStatus');
         Route::get('/fechar/{id}', 'BaController@fecharStatus')->name('fechar');
