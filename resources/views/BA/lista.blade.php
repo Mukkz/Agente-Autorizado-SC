@@ -16,8 +16,8 @@
                         @if(auth()->user()->admin == 'sim')
                         <a class="btn btn-success btn-sm" style="margin:5px;" href="{{route('exportBA')}}">Exportar Excel</a>
                                 <label style="margin-left: 50%;" for="filtros">Filtros:</label>
-                                <a class="btn btn-outline-primary btn-sm"  href="{{route('listarAbertosBA')}}"><b>Abertos</b></a>
-                                <a class="btn btn-outline-warning btn-sm"  href="{{route('listarPendentesBA')}}"><b>Pendentes</b></a>
+                                <!-- <a class="btn btn-outline-primary btn-sm"  href="{{route('listarAbertosBA')}}"><b>Abertos</b></a>
+                                <a class="btn btn-outline-warning btn-sm"  href="{{route('listarPendentesBA')}}"><b>Pendentes</b></a> -->
                                 <a class="btn btn-outline-danger btn-sm"  href="{{route('listaBA')}}"><b>Todos</b></a>
                             @endif
                     </div><br>
