@@ -5,7 +5,7 @@
 
     <script>        
         $(document).on("input", "#encerramento", function () {
-        var limite = 220;
+        var limite = 190;
         var caracteresDigitados = $(this).val().length;
         var caracteresRestantes = limite - caracteresDigitados;
 
@@ -43,8 +43,8 @@
                                            value="{{isset($registro->reclamacao) ? $registro->reclamacao : ''}}">
                                     <br>
                                     <label><b>Editar informação</b></label><br>
-                                    <textarea rows="3" maxlength="220" name="reclamacao" id="encerramento" cols="105"></textarea>
-                                    <p style="color:#ff0000;">(<span class="caracteres">220</span> Restantes)</p>
+                                    <textarea rows="3" maxlength="190" name="reclamacao" id="encerramento" cols="105"></textarea>
+                                    <p style="color:#ff0000;">(<span class="caracteres">190</span> Restantes)</p>
                                 </div>
 
                                 <div class="container">

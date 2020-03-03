@@ -5,7 +5,7 @@
 
     <script>        
         $(document).on("input", "#encerramento", function () {
-        var limite = 220;
+        var limite = 190;
         var caracteresDigitados = $(this).val().length;
         var caracteresRestantes = limite - caracteresDigitados;
 
@@ -67,8 +67,8 @@
                                     </div><br>
                                     <br><label><b>Informação</b></label><br>
                                     <!-- <input required type="text" name="encerramento"> -->
-                                    <textarea rows="3" maxlength="220" name="encerramento" id="encerramento" cols="105"></textarea>
-                                    <p style="color:#ff0000;">(<span class="caracteres">220</span> Restantes)</p>
+                                    <textarea rows="3" maxlength="190" name="encerramento" id="encerramento" cols="105"></textarea>
+                                    <p style="color:#ff0000;">(<span class="caracteres">190</span> Restantes)</p>
                                     <div class="container">
                                         <input type="hidden" name="resolucao" value="Fechado">
                                         <input type="hidden" name="status" value="Fechado">
