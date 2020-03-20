@@ -94,10 +94,11 @@
                                     <input type="hidden" name="user_id" value="{{Auth::id()}}">
                                     <input type="hidden" name="criado_por" value="{{auth()->user()->name}}">
                                 </div>
-
+                                @if (auth()->user()->cluster == 'FNS')
                                 <button type="submit" class="btn btn-primary" formaction="{{route('cadastrar')}}">
                                 <b> Enviar </b>
                                 </button>
+                                @endif
                             </form>
                         </main>
                     </div>
