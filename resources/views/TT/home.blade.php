@@ -102,8 +102,7 @@
                                 @if (auth()->user()->cluster == 'BNU')
                                 <h3 style="color:red">
                                     Visando a saúde de nossos técnicos diante desse caos que estamos vivendo,
-                                    foi realizado o bloqueio por tempo indeterminado a abertura de preventivas.
-                                    Diminuindo assim a visita técnica.
+                                    foi realizado o bloqueio por tempo indeterminado da abertura de preventivas.
                                 </h3>
                                 @endif
 
