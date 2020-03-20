@@ -99,6 +99,14 @@
                                 <b> Enviar </b>
                                 </button>
                                 @endif
+                                @if (auth()->user()->cluster == 'BNU')
+                                <h3 style="color:red">
+                                    Visando a saúde de nossos técnicos diante desse caos que estamos vivendo,
+                                    foi realizado o bloqueio por tempo indeterminado a abertura de preventivas.
+                                    Diminuindo assim a visita técnica.
+                                </h3>
+                                @endif
+
                             </form>
                         </main>
                     </div>
