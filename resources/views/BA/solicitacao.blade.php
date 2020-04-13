@@ -61,15 +61,15 @@
                                     <input type="hidden" name="user_id" value="{{Auth::id()}}">
                                     <input type="hidden" name="criado_por" value="{{auth()->user()->name}}">
                                 </div>
-                                @if (auth()->user()->cluster == 'x')
+
                                     <button type="submit" class="btn btn-primary" formaction="{{route('registrar')}}">
                                       <b>Enviar</b>
                                     </button>
-                                @endif
-                                <h3 style="color:red">
+
+                                <!-- <h3 style="color:red">
                                     Visando a saúde de nossos técnicos diante desse caos que estamos vivendo,
                                     foi realizado o bloqueio por tempo indeterminado da abertura de solicitações.
-                                </h3>
+                                </h3> -->
 
 
                             </form>
