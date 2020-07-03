@@ -24,9 +24,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
                     <ul class="navbar-nav mr-auto" style="color:#2e3436; font-size: 140%;float: none;">
                         <b style="color:white;">Solicitação de Manutenção (DDD @if(auth()->user()->cluster == 'BNU')
-                        47)
+                        Cluster BNU)
                         @else
-                        48)
+                        Cluster FNS)
                         @endif</b>
                     </ul>
                     @guest
