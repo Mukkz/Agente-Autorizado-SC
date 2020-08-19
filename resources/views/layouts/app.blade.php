@@ -25,8 +25,10 @@
                     <ul class="navbar-nav mr-auto" style="color:#2e3436; font-size: 140%;float: none;">
                         <b style="color:white;">Solicitação de Manutenção (Cluster @if(auth()->user()->cluster == 'BNU')
                         BNU)
-                        @else
+                        @elseif(auth()->user()->cluster == 'FNS')
                         FNS)
+                        @else
+                        JVE)
                         @endif</b>
                     </ul>
                     @guest
