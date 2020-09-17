@@ -67,7 +67,7 @@
                                     </button>
 
                                     @if(auth()->user()->cluster == 'BNU')
-
+                                    <br>
                                     <h3 style="color:red">
                                     Senhores estamos passando por um alto volume de BA, ou seja, não estamos conseguindo priorizar tudo !! Iremos utilizar o sistema como apoio injeção e não priorização.
                                     </h3>
