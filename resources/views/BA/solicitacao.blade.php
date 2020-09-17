@@ -66,10 +66,14 @@
                                       <b>Enviar</b>
                                     </button>
 
-                                <!-- <h3 style="color:red">
-                                    Visando a saúde de nossos técnicos diante desse caos que estamos vivendo,
-                                    foi realizado o bloqueio por tempo indeterminado da abertura de solicitações.
-                                </h3> -->
+                                    @if(auth()->user()->cluster == 'BNU')
+
+                                    <h3 style="color:red">
+                                    Senhores estamos passando por um alto volume de BA, ou seja, não estamos conseguindo priorizar tudo !! Iremos utilizar o sistema como apoio injeção e não priorização.
+                                    </h3>
+
+                                    @endif
+
 
 
                             </form>
