@@ -9,7 +9,7 @@
 
 ## Sobre o Agente Autorizado SC
 
-Sistema criado para uma operadora de telefonia, para a melhora de comunicação entre clients (Admin e User) com a variação de 2 ambientes (BA e TT).
+Sistema criado para uma operadora de telecomunicações, para a melhora de comunicação entre clients (Admin e User) com a variação de 2 ambientes (BA e TT).
 
 ## Descrição do Sistema
 
