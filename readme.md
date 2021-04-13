@@ -17,6 +17,12 @@ CRUD com variável de dois ambientes, onde há a troca de mensagem por meio de o
 Possui sistema de login, dividido para Admin e User comum.
 Foi criado com pouca escalabilidade, no momento feito para 3 clusters diferentes.
 
+## Recursos Utilizados
+
+<p>Laravel</p>
+<p>JQuery</p>
+<p>Bootstrap</p>
+
 ## Pré-requisitos
 
 <p>PHP: ^7.1.3</p>
