@@ -14,7 +14,7 @@ Sistema criado para uma operadora de telecomunicação, com intuito de melhorar 
 ## Descrição do Sistema
 
 CRUD com variável de dois ambientes, onde há a troca de mensagem por meio de ordem de serviços solicitadas.
-Possui sistema de login, dividido para Admin e User comum.
+Possui sistema de login, dividido para Admin e User.
 Foi criado com pouca escalabilidade, no momento feito para 3 clusters diferentes.
 
 ## Recursos Utilizados
